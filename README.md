@@ -4,7 +4,6 @@ Hello there! I've recently completed the Google Data Analytics Professional Cert
 
 I'll walk you through how I approached the e-commerce website optimization case study. For this project, I've chosen to utilize the powerful combination of RStudio and Tableau, leveraging the strengths of both tools to dive deep into the data.
 
-***
-
 ### Case Study Track B
+
 For Track B, I had the freedom to choose my own questions and dataset. In this case study, I focused on optimizing the conversion rates of an e-commerce website.
