@@ -129,8 +129,54 @@ e_commerce_wl$age <- ifelse(grepl("[^0-9]", e_commerce_wl$age), NA, e_commerce_w
 e_commerce_wl$age <- as.numeric(e_commerce_wl$age)
 ```
 
-3. **Sorting Out Categories:**
-   - In some columns like *gender*, *country*, *membership*, *language*, *returned*, and *pay_method*, things might be written in different ways. We'll make them all look the same for simplicity.
+3. **Transforming Country Codes into Full Country Names:** In the country column, values were initially represented using country codes. However, not everyone may be familiar with the meaning of each country code. To enhance clarity and user understanding, the data was transformed into a consistent and standardized format using full country names. This ensures that the dataset is more accessible, especially for individuals who may not be familiar with the specific country codes.
+``` r
+# Checking values for data entry errors
+unique_country <- unique(e_commerce_wl$country)
+print(unique_country)# Printed data verified, all values are correct
+
+# Function to convert country codes to full names
+convert_country <- function(country_code) {
+  country_code <- toupper(country_code)
+  case_when(
+    country_code %in% c("CA", "CANADA") ~ "Canada",
+    country_code %in% c("AR", "ARGENTINA") ~ "Argentina",
+    country_code %in% c("PL", "POLAND") ~ "Poland",
+    country_code %in% c("IN", "INDIA") ~ "India",
+    country_code %in% c("KR", "SOUTH KOREA") ~ "South Korea",
+    country_code %in% c("CN", "CHINA") ~ "China",
+    country_code %in% c("AT", "AUSTRIA") ~ "Austria",
+    country_code %in% c("US", "UNITED STATES") ~ "United States",
+    country_code %in% c("SE", "SWEDEN") ~ "Sweden",
+    country_code %in% c("CH", "SWITZERLAND") ~ "Switzerland",
+    country_code %in% c("NO", "NORWAY") ~ "Norway",
+    country_code %in% c("JP", "JAPAN") ~ "Japan",
+    country_code %in% c("GB", "UNITED KINGDOM") ~ "United Kingdom",
+    country_code %in% c("MX", "MEXICO") ~ "Mexico",
+    country_code %in% c("IT", "ITALY") ~ "Italy",
+    country_code %in% c("RU", "RUSSIA") ~ "Russia",
+    country_code %in% c("DE", "GERMANY") ~ "Germany",
+    country_code %in% c("AU", "AUSTRALIA") ~ "Australia",
+    country_code %in% c("FI", "FINLAND") ~ "Finland",
+    country_code %in% c("PR", "PUERTO RICO") ~ "Puerto Rico",
+    country_code %in% c("DK", "DENMARK") ~ "Denmark",
+    country_code %in% c("CO", "COLOMBIA") ~ "Colombia",
+    country_code %in% c("AE", "UNITED ARAB EMIRATES") ~ "United Arab Emirates",
+    country_code %in% c("IE", "IRELAND") ~ "Ireland",
+    country_code %in% c("PE", "PERU") ~ "Peru",
+    country_code %in% c("ZA", "SOUTH AFRICA") ~ "South Africa",
+    country_code %in% c("FR", "FRANCE") ~ "France",
+    TRUE ~ as.character(country_code)  # Keep other values unchanged
+  )
+}
+
+# Standardize values in the country column
+e_commerce_wl <- e_commerce_wl %>%
+  mutate(
+    country = convert_country(country)
+  )
+```
+
 
 4. **Checking for Missing Info:**
    - Let's see if there's any information missing. If something's missing, we'll decide what to do – either guess the missing bits or maybe leave out the whole row if we can't figure it out.
