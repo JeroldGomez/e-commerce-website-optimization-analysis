@@ -112,7 +112,7 @@ While looking at our data, we noticed a few things that need fixing to make sure
 e_commerce_wl <- e_commerce_wl %>% clean_names()
 ```
 
-2. **Data Type Tweaks:**: Convert the data type of the *accessed_date* and *age* columns, currently represented as characters, into more appropriate formats for analysis, such as datetime and numeric types.
+2. **Data Type Tweaks:** Convert the data type of the *accessed_date* and *age* columns, currently represented as characters, into more appropriate formats for analysis, such as datetime and numeric types.
 ``` r
 # Convert accessed_date to datetime format
 e_commerce_wl$accessed_date <- as.POSIXct(e_commerce_wl$accessed_date, format = "%Y-%m-%d %H:%M:%OS")
