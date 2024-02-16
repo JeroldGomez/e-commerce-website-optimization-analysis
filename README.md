@@ -102,5 +102,5 @@ Output from `str(e_commerce_wl)`:
 As we can observe, it looks like there are a few potential data cleaning tasks that need to be performed
 
 **Column Name Standardization:**
-⋅⋅⋅The column names have spaces and special characters. Consider standardizing them to make them more user-friendly and compatible with 
+  The column names have spaces and special characters. Consider standardizing them to make them more user-friendly and compatible with 
 
