@@ -65,7 +65,7 @@ Special thanks to [KZ Data Lover](https://www.kaggle.com/kzmontage/datasets), th
 
 **Data Cleaning Process**
 
-``` js
+``` r
 # Load tidyverse functions for data filtering, transformation, and plotting
 library(tidyverse)
 
