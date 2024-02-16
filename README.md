@@ -55,6 +55,8 @@ Learned to formulate meaningful business questions that drive data analysis.
 
 Enhance the conversion rates of the e-commerce website by conducting a comprehensive analysis of user behavior. The objective is to identify influential factors, including the effectiveness of different traffic sources, user demographics, session duration, and the impact of membership status on conversions. The insights derived from this analysis will guide the optimization of the website, focusing on improving user engagement and tailoring the user experience to maximize the percentage of visitors who make a purchase.
 
+______
+
 ### Prepare
 
 Acquired skills to explore and understand datasets and applied techniques for data cleaning and preparation.
