@@ -71,8 +71,8 @@ Special thanks to [KZ Data Lover](https://www.kaggle.com/kzmontage/datasets), th
 
 ``` r
 # Install required packages 
-#install.packages("tidyverse")
-#install.packages("janitor")
+install.packages("tidyverse")
+install.packages("janitor")
 
 # Load the necessary packages
 library(tidyverse)  # For data manipulation and visualization
@@ -106,8 +106,8 @@ Output from `str(e_commerce_wl)`:
 ```
 While looking at our data, we noticed a few things that need fixing to make sure it's reliable:
 
-1. **Fixing Column Names:**
-   - Address typos and special characters in column names, such as *duration_.secs.* and *accessed_Ffom*, to ensure a standardized and clear naming convention.
+**Fixing Column Names:**
+- Address typos and special characters in column names, such as *duration_.secs.* and *accessed_Ffom*, to ensure a standardized and clear naming convention.
 ``` r
 # Use clean_names() to standardize column names
 e_commerce_wl <- e_commerce_wl %>% clean_names()
