@@ -109,7 +109,8 @@ While looking at our data, we noticed a few things that need fixing to make sure
 1. **Fixing Column Names:** Address typos and special characters in column names, such as *duration_.secs.* and *accessed_Ffom*, to ensure a standardized and clear naming convention.
 ``` r
 # Use clean_names() to standardize column names
-e_commerce_wl <- e_commerce_wl %>% clean_names()
+e_commerce_wl <- e_commerce_wl %>% clean_names() # Problems renaming "accessed_Ffom", it became "accessed_ffom".
+colnames(e_commerce_wl)[colnames(e_commerce_wl) == "accessed_ffom"] <- "accessed_from" # renaming "accessed_ffom" to "accessed_from"
 ```
 
 2. **Data Type Tweaks:** Convert the data type of the *accessed_date* and *age* columns, currently represented as characters, into more appropriate formats for analysis, such as datetime and numeric types.
