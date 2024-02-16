@@ -62,3 +62,16 @@ Acquired skills to explore and understand datasets and applied techniques for da
 Utilized the "E-commerce Website Log" dataset, sourced from [Kaggle](https://www.kaggle.com/datasets/kzmontage/e-commerce-website-logs), which is licensed under the Open Database License (ODbL). The dataset contains information about user interactions on the e-commerce website, including session duration, traffic sources, user demographics, and membership status.
 
 Special thanks to [KZ Data Lover](https://www.kaggle.com/kzmontage/datasets), the creator of the "E-commerce Website Log" dataset on Kaggle. Their contribution provides valuable insights for data analysis, and I'm grateful for the opportunity to explore and learn from this dataset.
+
+**Data Cleaning Process**
+
+``` js
+# Load tidyverse functions for data filtering, transformation, and plotting
+library(tidyverse)
+
+# Load the E-commerce Website Logs dataset
+e_commerce_wl <- read.csv("E-commerce Website Logs.csv")
+
+# Inspect its structure
+str(e_commerce_wl)
+```
