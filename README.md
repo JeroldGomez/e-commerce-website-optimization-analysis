@@ -112,8 +112,21 @@ While looking at our data, we noticed a few things that need fixing to make sure
 e_commerce_wl <- e_commerce_wl %>% clean_names()
 ```
 
-2. **Data Type Tweaks:**
-   - The dates (*accessed_date*) and ages (*age*) are currently written in a way that computers find confusing. We'll tidy them up so they're easier to work with.
+2. **Data Type Tweaks:**: Convert the data type of the *accessed_date* and *age* columns, currently represented as characters, into more appropriate formats for analysis, such as datetime and numeric types.
+``` r
+# Convert accessed_date to datetime format
+e_commerce_wl$accessed_date <- as.POSIXct(e_commerce_wl$accessed_date, format = "%Y-%m-%d %H:%M:%OS")
+
+# Checking unique values in the age column for data entry errors
+unique_age_values <- unique(e_commerce_wl$age)
+print(unique_age_values) # Printed data has non-numeric values, such as "--"
+
+# Handling non-numeric values, we want to convert non-numeric values to NA
+e_commerce_wl$age <- ifelse(grepl("[^0-9]", e_commerce_wl$age), NA, e_commerce_wl$age)
+
+# Converting age to numeric
+e_commerce_wl$age <- as.numeric(e_commerce_wl$age)
+```
 
 3. **Sorting Out Categories:**
    - In some columns like *gender*, *country*, *membership*, *language*, *returned*, and *pay_method*, things might be written in different ways. We'll make them all look the same for simplicity.
