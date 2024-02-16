@@ -70,8 +70,13 @@ Special thanks to [KZ Data Lover](https://www.kaggle.com/kzmontage/datasets), th
 **Data Cleaning Process**
 
 ``` r
-# Load tidyverse functions for data filtering, transformation, and plotting
-library(tidyverse)
+# Install required packages 
+#install.packages("tidyverse")
+#install.packages("janitor")
+
+# Load the necessary packages
+library(tidyverse)  # For data manipulation and visualization
+library(janitor)   # For data cleaning and tidying
 
 # Load the E-commerce Website Logs dataset
 e_commerce_wl <- read.csv("E-commerce Website Logs.csv")
@@ -99,8 +104,25 @@ Output from `str(e_commerce_wl)`:
  $ returned_amount : num  0 0 0 0 0 ...
  $ pay_method      : chr  "Credit Card" "Debit Card" "Cash" "Credit Card" ...
 ```
-As we can observe, it looks like there are a few potential data cleaning tasks that need to be performed
+While looking at our data, we noticed a few things that need fixing to make sure it's reliable:
 
-**Column Name Standardization:**
-  The column names have spaces and special characters. Consider standardizing them to make them more user-friendly and compatible with 
+1. **Fixing Column Names:**
+   - Address typos and special characters in column names, such as *duration_.secs.* and *accessed_Ffom*, to ensure a standardized and clear naming convention.
+``` r
+# Use clean_names() to standardize column names
+e_commerce_wl <- e_commerce_wl %>% clean_names()
+```
+
+2. **Data Type Tweaks:**
+   - The dates (*accessed_date*) and ages (*age*) are currently written in a way that computers find confusing. We'll tidy them up so they're easier to work with.
+
+3. **Sorting Out Categories:**
+   - In some columns like *gender*, *country*, *membership*, *language*, *returned*, and *pay_method*, things might be written in different ways. We'll make them all look the same for simplicity.
+
+4. **Checking for Missing Info:**
+   - Let's see if there's any information missing. If something's missing, we'll decide what to do – either guess the missing bits or maybe leave out the whole row if we can't figure it out.
+
+5. **Fixing Mistakes:**
+   - We'll also look out for any errors in the data. For example, in the *network_protocol* and *age* columns, there might be typos or things that just don't make sense. We'll straighten those out.
+
 
