@@ -51,4 +51,14 @@ Learned to formulate meaningful business questions that drive data analysis.
 
 **Business Task:**
 
-Enhance the conversion rates of the e-commerce website by conducting a comprehensive analysis of user behavior. The objective is to identify influential factors, including the effectiveness of different traffic sources, user demographics (age, gender, and country), session duration, and the impact of membership status on conversions. The insights derived from this analysis will guide the optimization of the website, focusing on improving user engagement and tailoring the user experience to maximize the percentage of visitors who make a purchase.
+Enhance the conversion rates of the e-commerce website by conducting a comprehensive analysis of user behavior. The objective is to identify influential factors, including the effectiveness of different traffic sources, user demographics, session duration, and the impact of membership status on conversions. The insights derived from this analysis will guide the optimization of the website, focusing on improving user engagement and tailoring the user experience to maximize the percentage of visitors who make a purchase.
+
+### Prepare
+
+Acquired skills to explore and understand datasets and applied techniques for data cleaning and preparation.
+
+**Dataset Overview**
+
+Utilized the "E-commerce Website Log" dataset, sourced from [Kaggle](https://www.kaggle.com/datasets/kzmontage/e-commerce-website-logs), which is licensed under the Open Database License (ODbL). The dataset contains information about user interactions on the e-commerce website, including session duration, traffic sources, user demographics, and membership status.
+
+Special thanks to [KZ Data Lover](https://www.kaggle.com/kzmontage/datasets), the creator of the "E-commerce Website Log" dataset on Kaggle. Their contribution provides valuable insights for data analysis, and I'm grateful for the opportunity to explore and learn from this dataset.
