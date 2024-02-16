@@ -13,6 +13,16 @@ For Track B, I had the freedom to choose my own questions and dataset. In this c
 You are a junior data analyst working for a business intelligence consultant. You have been at your job for six months, and your boss feels you are ready for more responsibility. He has asked you to lead a project for a brand new client — this will involve everything from defining the business task all the way through presenting your data-driven recommendations. You will choose the topic, ask the right questions, identify a fresh dataset and ensure its integrity, conduct analysis, create compelling data visualizations, and prepare a presentation.
 
 ### Ask
+Learned to formulate meaningful business questions that drive data analysis.
+
+| Questions |
+| ----------- |
+| What topic are you exploring? |
+| What is the problem you are trying to solve? |
+| What metrics will you use to measure your data to achieve your objective? |
+| Who are the stakeholders? |
+|  Who is your audience? |
+| How can your insights help your client make decisions? |
 
 **Topic:** E-commerce Website User Behavior Analysis for Optimization
 
@@ -22,7 +32,7 @@ You are a junior data analyst working for a business intelligence consultant. Yo
 
 - Conversion Rate: Measure the percentage of website visitors who make a purchase.
 - Average Session Duration: Analyze how long users spend on the website.
-- Traffic Source: Examine the effectiveness of different platforms (accessed_From) in bringing users to the website.
+- Traffic Source: Examine the effectiveness of different platforms in bringing users to the website.
 - Demographic Insights: Utilize age, gender, and country data to understand user demographics.
 - Membership Influence: Investigate how membership status correlates with conversion rates.
 
@@ -38,3 +48,7 @@ You are a junior data analyst working for a business intelligence consultant. Yo
 - Marketing: Insights will help in refining and targeting marketing strategies based on effective traffic sources and demographic preferences.
 - UX/UI Team: Recommendations for improving the user interface and experience to increase session duration and engagement.
 - Executives/Management: Make data-driven decisions to allocate resources effectively and prioritize improvements.
+
+**Business Task:**
+
+Enhance the conversion rates of the e-commerce website by conducting a comprehensive analysis of user behavior. The objective is to identify influential factors, including the effectiveness of different traffic sources, user demographics (age, gender, and country), session duration, and the impact of membership status on conversions. The insights derived from this analysis will guide the optimization of the website, focusing on improving user engagement and tailoring the user experience to maximize the percentage of visitors who make a purchase.
