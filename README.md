@@ -12,17 +12,19 @@ For Track B, I had the freedom to choose my own questions and dataset. In this c
 
 You are a junior data analyst working for a business intelligence consultant. You have been at your job for six months, and your boss feels you are ready for more responsibility. He has asked you to lead a project for a brand new client — this will involve everything from defining the business task all the way through presenting your data-driven recommendations. You will choose the topic, ask the right questions, identify a fresh dataset and ensure its integrity, conduct analysis, create compelling data visualizations, and prepare a presentation.
 
-### Ask
-> Learned to formulate meaningful business questions that drive data analysis.
+___
 
-> | Questions |
-> | ----------- |
-> | What topic are you exploring? |
-> | What is the problem you are trying to solve? |
-> | What metrics will you use to measure your data to achieve your objective? |
-> | Who are the stakeholders? |
-> |  Who is your audience? |
-> | How can your insights help your client make decisions? |
+### Ask
+Learned to formulate meaningful business questions that drive data analysis.
+
+| Questions |
+| ----------- |
+| What topic are you exploring? |
+| What is the problem you are trying to solve? |
+| What metrics will you use to measure your data to achieve your objective? |
+| Who are the stakeholders? |
+|  Who is your audience? |
+| How can your insights help your client make decisions? |
 
 **Topic:** E-commerce Website User Behavior Analysis for Optimization
 
@@ -51,17 +53,17 @@ You are a junior data analyst working for a business intelligence consultant. Yo
 
 **Business Task:**
 
-> Enhance the conversion rates of the e-commerce website by conducting a comprehensive analysis of user behavior. The objective is to identify influential factors, including the effectiveness of different traffic sources, user demographics, session duration, and the impact of membership status on conversions. The insights derived from this analysis will guide the optimization of the website, focusing on improving user engagement and tailoring the user experience to maximize the percentage of visitors who make a purchase.
+Enhance the conversion rates of the e-commerce website by conducting a comprehensive analysis of user behavior. The objective is to identify influential factors, including the effectiveness of different traffic sources, user demographics, session duration, and the impact of membership status on conversions. The insights derived from this analysis will guide the optimization of the website, focusing on improving user engagement and tailoring the user experience to maximize the percentage of visitors who make a purchase.
 
 ### Prepare
 
-> Acquired skills to explore and understand datasets and applied techniques for data cleaning and preparation.
+Acquired skills to explore and understand datasets and applied techniques for data cleaning and preparation.
 
 **Dataset Overview**
 
-> Utilized the "E-commerce Website Log" dataset, sourced from [Kaggle](https://www.kaggle.com/datasets/kzmontage/e-commerce-website-logs), which is licensed under the Open Database License (ODbL). The dataset contains information about user interactions on the e-commerce website, including session duration, traffic sources, user demographics, and membership status.
+Utilized the "E-commerce Website Log" dataset, sourced from [Kaggle](https://www.kaggle.com/datasets/kzmontage/e-commerce-website-logs), which is licensed under the Open Database License (ODbL). The dataset contains information about user interactions on the e-commerce website, including session duration, traffic sources, user demographics, and membership status.
 
-> Special thanks to [KZ Data Lover](https://www.kaggle.com/kzmontage/datasets), the creator of the "E-commerce Website Log" dataset on Kaggle. Their contribution provides valuable insights for data analysis, and I'm grateful for the opportunity to explore and learn from this dataset.
+Special thanks to [KZ Data Lover](https://www.kaggle.com/kzmontage/datasets), the creator of the "E-commerce Website Log" dataset on Kaggle. Their contribution provides valuable insights for data analysis, and I'm grateful for the opportunity to explore and learn from this dataset.
 
 **Data Cleaning Process**
 
@@ -95,5 +97,5 @@ Output from `str(e_commerce_wl)`:
  $ returned_amount : num  0 0 0 0 0 ...
  $ pay_method      : chr  "Credit Card" "Debit Card" "Cash" "Credit Card" ...
 ```
-As we can observe, it looks like there are a few potential data cleaning tasks that needs to be performed
+As we can observe, it looks like there are a few potential data cleaning tasks that need to be performed
 
