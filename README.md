@@ -76,7 +76,7 @@ e_commerce_wl <- read.csv("E-commerce Website Logs.csv")
 str(e_commerce_wl)
 ```
 
-Output from str(e_commerce_wl):
+Output from `str(e_commerce_wl)`:
 ```
 'data.frame':	172838 obs. of  15 variables:
  $ accessed_date   : chr  "2017-03-14 17:43:57.172" "2017-03-14 17:43:57.172" "2017-03-14 17:43:26.135" "2017-03-14 17:43:26.135" ...
