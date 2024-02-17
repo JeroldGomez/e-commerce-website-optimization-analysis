@@ -387,13 +387,15 @@ The table below displays the count of visits for each accessed platform:
 | 6    | Others            | 26,592 |
 | 7    | Safari            | 16,620 |
 
+To enhance understanding, I created a bar plot visualizing the distribution of visits across different traffic sources. The plot provides a visual representation of the data, making it easier to identify patterns and trends.
+
+![traffic_source_distribution (2)](https://github.com/JeroldGomez/E-Commerce-Website-Optimization-Analysis/assets/106787297/5a802439-84f7-42c2-ba08-4a3f28a62a46)
+
 ### Insights
 
 1. **Android App** and **Chrome** are the top two traffic sources with the highest number of visits.
 2. **Microsoft Edge** and **Safari** have comparatively lower visit counts, indicating potential areas for improvement or optimization.
 3. **Mozilla Firefox** and **Others** also contribute significantly to the overall traffic.
-
-To enhance understanding, I created a bar plot visualizing the distribution of visits across different traffic sources. The plot provides a visual representation of the data, making it easier to identify patterns and trends.
 
 
 
