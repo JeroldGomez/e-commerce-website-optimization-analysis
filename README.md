@@ -230,7 +230,7 @@ e_commerce_wl$accessed_from <- gsub("SafFRi", "Safari", e_commerce_wl$accessed_f
 
 **Language Column**
 
-The language column shows inconsistency in case (uppercase/lowercase). To ensure consistency, I converted all values to lowercase using the tolower() function.
+The language column shows inconsistency in case (uppercase/lowercase). To ensure consistency,  I converted all values to title case, where the first letter of each word is capitalized.
 
 ``` r
 [1] "Column: language"
@@ -243,11 +243,11 @@ The language column shows inconsistency in case (uppercase/lowercase). To ensure
 
 To address this, I performed the following corrections:
 
--  Applied the tolower() function to convert all values in the language column to lowercase
+-  Applied the tools::toTitleCase() function to convert all values in the language column to title case:
 
 ``` r
-# Convert values in the language column to lowercase
-e_commerce_wl$language <- tolower(e_commerce_wl$language)
+# Convert values in the language column to title case
+e_commerce_wl$language <- tools::toTitleCase(e_commerce_wl$language)
 ```
 
 
