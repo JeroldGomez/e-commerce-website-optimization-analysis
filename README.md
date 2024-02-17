@@ -69,6 +69,8 @@ I organized the dataset by placing it into a folder named "GivenameFolder." Addi
 
 Special thanks to [KZ Data Lover](https://www.kaggle.com/kzmontage/datasets), the creator of the "E-commerce Website Log" dataset on Kaggle. Their contribution provides valuable insights for data analysis, and I'm grateful for the opportunity to explore and learn from this dataset.
 
+___
+
 ### Process
 
 I used RStudio, a handy program for working with data, along with tidyverse and janitor, simple packages that make it easy to understand and clean up data. 
@@ -119,7 +121,7 @@ e_commerce_wl <- e_commerce_wl %>% clean_names() # Problems renaming "accessed_F
 colnames(e_commerce_wl)[colnames(e_commerce_wl) == "accessed_ffom"] <- "accessed_from" # renaming "accessed_ffom" to "accessed_from"
 ```
 
-2. **Data Type Tweaks:** Convert the data type of the *accessed_date* and *age* columns, currently represented as characters, into more appropriate formats for analysis, such as datetime and numeric types.
+2. **Data Type Tweaks:** Convert the data type of the *accessed_date* and *age* columns, currently represented as characters, into more appropriate formats for analysis, such as datetime and numeric types. Let's also convert the data type of the *duration_secs* and *byte* columns from integer to numeric for the sake of consistency.
 ``` r
 # Convert accessed_date to datetime format
 e_commerce_wl$accessed_date <- as.POSIXct(e_commerce_wl$accessed_date, format = "%Y-%m-%d %H:%M:%OS")
@@ -133,6 +135,10 @@ e_commerce_wl$age <- ifelse(grepl("[^0-9]", e_commerce_wl$age), NA, e_commerce_w
 
 # Converting age to numeric
 e_commerce_wl$age <- as.numeric(e_commerce_wl$age)
+
+# Change data type of duration_secs and bytes columns to numeric
+e_commerce_wl$duration_secs <- as.numeric(e_commerce_wl$duration_secs)
+e_commerce_wl$bytes <- as.numeric(e_commerce_wl$bytes)
 ```
 
 3. **Transforming Country Codes into Full Country Names:** In the country column, values were initially represented using country codes. However, not everyone may be familiar with the meaning of each country code. To enhance clarity and user understanding, the data was transformed into a consistent and standardized format using full country names. This ensures that the dataset is more accessible, especially for individuals who may not be familiar with the specific country codes.
