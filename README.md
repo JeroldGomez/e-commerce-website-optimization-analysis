@@ -282,14 +282,16 @@ Output from `str(e_commerce_wl)`
  $ returned_amount : num  0 0 0 0 0 ...
  $ pay_method      : chr  "Credit Card" "Debit Card" "Cash" "Credit Card" ...
 ```
-The dataset now appears to be well-structured and cleaned, with standardized column names, corrected data types, and consistent values. This sets the stage for the upcoming analysis phase. Saving the cleaned dataset to a CSV file named 'cleaned_e_commerce_dataset.csv.' This file is now prepared for further exploration and visualization, particularly in Tableau.
+The dataset now appears to be well-structured and cleaned, with standardized column names, corrected data types, and consistent values. This sets the stage for the upcoming analysis phase. 
+
+Saving the cleaned dataset to a CSV file named 'cleaned_e_commerce_dataset.csv.' This file is now prepared for further exploration and visualization, particularly in Tableau.
 
 ``` r
 # Save the cleaned dataset to a CSV file
 write.csv(e_commerce_wl, "cleaned_e_commerce_dataset.csv", row.names = FALSE)
 ```
 
-Now, we're all set to dive into the exciting part, analyzing the data!
+Now, we're all set to dive into the exciting part, analyzing and visualizing the data!
 
 ___
 
