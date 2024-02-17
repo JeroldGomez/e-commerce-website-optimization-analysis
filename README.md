@@ -314,7 +314,7 @@ To gauge the effectiveness of the e-commerce website in turning visitors into cu
 ``` r
 # Count the number of unique visitors based on the IP column
 unique_visitors <- length(unique(e_commerce_wl$ip))
-print(unique_visitors) # This prints the total number of unique visitors to the website.
+print(unique_visitors) # This prints the total number of unique visitors to the website, which resulted to 137,199 unique visitors
 
 # Identify unique visitors who made a purchase
 visitors_with_purchase <- e_commerce_wl %>%
@@ -324,23 +324,24 @@ visitors_with_purchase <- e_commerce_wl %>%
   
 # Explanation:
 # group_by(ip) : Groups the data by unique IP addresses.
-# filter(any(sales > 0)): Filters the groups to include only those where at least one sale is greater than 0.
+# filter(any(sales > 0)): Filters the groups to include only those where at least one sale is greater than 0, which determines that this visitor made a purchase
 # distinct(ip): Retains only unique IP addresses in the resulting data frame.
 
 # Count the number of successful conversions (unique visitors who made a purchase)
-conversions <- nrow(visitors_with_purchase)
+total_conversions <- nrow(visitors_with_purchase) # 105,661 successful purchases
 # Explanation: nrow(visitors_with_purchase) counts the number of rows in the `visitors_with_purchase` data frame, 
 # which represents the unique visitors who made a purchase.
 
 # Calculate the conversion rate based on unique visitors
-conversion_rate <- round((conversions / unique_visitors) * 100, 2)
+conversion_rate <- round((total_conversions / unique_visitors) * 100, 2)
 cat("Conversion Rate:", conversion_rate, "%\n")
 # Explanation:
-# (conversions / unique_visitors) * 100: Calculates the conversion rate as a percentage.
+# (total_conversions / unique_visitors) * 100: Calculates the conversion rate as a percentage.
 # round(..., 2): Rounds the result to two decimal places for clarity.
 # cat("Conversion Rate:", conversion_rate, "%\n"): Prints the conversion rate along with a descriptive message.
 
 ```
+After analyzing the data, we found that the conversion rate for the e-commerce website is **77.01%**. This percentage represents the proportion of unique visitors who made a purchase out of the total unique visitors to the website. The conversion rate is a key metric indicating the effectiveness of the website in converting visits into successful transactions.
 
 
 
