@@ -388,6 +388,25 @@ The table below displays the count of visits for each accessed platform:
 | 7    | Safari            | 16,620 |
 
 To enhance understanding, I created a bar plot visualizing the distribution of visits across different traffic sources. The plot provides a visual representation of the data, making it easier to identify patterns and trends.
+``` r
+# Create a bar plot for traffic source distribution
+traffic_plot <- ggplot(traffic_source_summary, aes(x = accessed_from, y = Visits, fill = accessed_from)) +
+  geom_bar(stat = "identity") +
+  labs(title = "Traffic Source Distribution",
+       x = "Traffic Source",
+       y = "Number of Visits") +
+  theme_minimal() +
+  theme(
+    axis.text = element_text(color = "white"),   # Text color on axes
+    axis.title = element_text(color = "white"),  # Text color of axis titles
+    legend.text = element_text(color = "white"), # Text color in the legend
+    legend.title = element_text(color = "white"), # Legend title color
+    plot.title = element_text(color = "white") # Text color on plot title
+  )
+
+# Save the plot as a PNG file
+ggsave("traffic_source_distribution.png")
+```
 
 ![traffic_source_distribution (2)](https://github.com/JeroldGomez/E-Commerce-Website-Optimization-Analysis/assets/106787297/5a802439-84f7-42c2-ba08-4a3f28a62a46)
 
