@@ -387,7 +387,7 @@ The table below displays the count of visits for each accessed platform:
 | 6    | Others            | 26,592 |
 | 7    | Safari            | 16,620 |
 
-To enhance understanding, I created a bar plot visualizing the distribution of visits across different traffic sources. The plot provides a visual representation of the data, making it easier to identify patterns and trends.
+To enhance understanding, I used the `ggplot` library in R to create a bar plot visualizing the distribution of visits across different traffic sources. The plot provides a visual representation of the data, making it easier to identify patterns and trends.
 ``` r
 # Create a bar plot for traffic source distribution
 traffic_plot <- ggplot(traffic_source_summary, aes(x = accessed_from, y = Visits, fill = accessed_from)) +
