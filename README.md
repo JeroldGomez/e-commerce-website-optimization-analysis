@@ -416,7 +416,7 @@ ggsave("traffic_source_distribution.png")
 2. **Microsoft Edge** and **Safari** have comparatively lower visit counts, indicating potential areas for improvement or optimization.
 3. **Mozilla Firefox** and **Others** also contribute significantly to the overall traffic.
 
-
+**Analyzing User Demographics**
 
 
 
