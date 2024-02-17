@@ -350,6 +350,7 @@ While a high conversion rate is positive, it's also essential to continuously an
 To gain insights into user engagement, we calculated the average session duration on the e-commerce website.
 
 ```r
+# Calculate the average session duration
 average_session_duration <- mean(e_commerce_wl$duration_secs, na.rm = TRUE)
 
 # Explanation:
@@ -361,5 +362,10 @@ average_session_duration_minutes <- average_session_duration / 60
 ```
 After calculating the average session duration, which resulted in approximately **3248.032** seconds which is a total of 54.13 minutes.
 In our case, the average session duration of around 54 minutes suggests a relatively healthy engagement level, but further analysis and correlation with other metrics will provide a more comprehensive understanding of user interactions and guide optimization strategies for improved website performance.
+
+**Traffic Source Effectiveness**
+
+
+
 
 
