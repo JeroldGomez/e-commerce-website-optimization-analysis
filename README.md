@@ -195,12 +195,24 @@ for (col in colnames(e_commerce_wl)) {
 
 After printing the output, we identified some data entry errors that required attention. Here are the issues identified in specific columns and the corrective actions taken:
 
-#### Network Protocol Column
+**Network Protocol Column**
 
-The *network_protocol* column had leading and trailing whitespaces in some values. Additionally, the values were not standardized. To address this, I performed the following corrections:
+The *network_protocol* column had leading and trailing whitespaces in some values. Additionally, the values were not standardized. 
+
+``` r
+[1] "Column: network_protocol"
+[1] "TCP  "  "ICMP "  "HTTP"   "UDP  "  "HTTP  "
+```
+
+To address this, I performed the following corrections:
 
 - Removed leading/trailing whitespaces using the `trimws()` function.
 - Standardized values by replacing "TCP" with "TCP/IP."
 
-The updated unique values in the *network_protocol* column are as follows:
+``` r
+# Remove leading/trailing whitespaces and standardize values
+e_commerce_wl$network_protocol <- trimws(e_commerce_wl$network_protocol)
+e_commerce_wl$network_protocol <- gsub("TCP", "TCP/IP", e_commerce_wl$network_protocol)
+```
+
 
