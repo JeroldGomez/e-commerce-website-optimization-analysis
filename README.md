@@ -311,20 +311,37 @@ For the initial part of our analysis, we'll be utilizing RStudio for statistical
 
 To gauge the effectiveness of the e-commerce website in turning visitors into customers, we calculate the conversion rate. Here's a breakdown of the process:
 
-1. **Total Visitors Count:**
-   - We start by obtaining the total number of visitors to the website, which stands at 172,838.
 ``` r
-total_visitors <- nrow(e_commerce_wl) # Get the total number of visitors
-print(total_visitors) # total visitors of 172,838
+# Count the number of unique visitors based on the IP column
+unique_visitors <- length(unique(e_commerce_wl$ip))
+print(unique_visitors) # This prints the total number of unique visitors to the website.
+
+# Identify unique visitors who made a purchase
+visitors_with_purchase <- e_commerce_wl %>%
+  group_by(ip) %>%
+  filter(any(sales > 0)) %>%
+  distinct(ip)
+  
+# Explanation:
+# group_by(ip) : Groups the data by unique IP addresses.
+# filter(any(sales > 0)): Filters the groups to include only those where at least one sale is greater than 0.
+# distinct(ip): Retains only unique IP addresses in the resulting data frame.
+
+# Count the number of successful conversions (unique visitors who made a purchase)
+conversions <- nrow(visitors_with_purchase)
+# Explanation: nrow(visitors_with_purchase) counts the number of rows in the `visitors_with_purchase` data frame, 
+# which represents the unique visitors who made a purchase.
+
+# Calculate the conversion rate based on unique visitors
+conversion_rate <- round((conversions / unique_visitors) * 100, 2)
+cat("Conversion Rate:", conversion_rate, "%\n")
+# Explanation:
+# (conversions / unique_visitors) * 100: Calculates the conversion rate as a percentage.
+# round(..., 2): Rounds the result to two decimal places for clarity.
+# cat("Conversion Rate:", conversion_rate, "%\n"): Prints the conversion rate along with a descriptive message.
+
 ```
 
-2. **Counting Successful Conversions:**
-   - Next, we identify successful conversions by counting instances where sales were greater than zero per row(visitor). This provides us with the number of visitors who made a purchase.
-
-3. **Calculating Conversion Rate:**
-   - Finally, the conversion rate is determined by dividing the number of conversions by the total number of visitors and multiplying by 100 for a percentage. The resulting conversion rate is rounded to two decimal places.
-
-In our analysis, the calculated conversion rate provides valuable insights into the website's ability to convert visitors into customers. This metric serves as a key indicator of the overall success of the e-commerce platform in driving sales.
 
 
 
