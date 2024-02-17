@@ -221,7 +221,7 @@ The *accessed_from* column contained a typo, where "SafFRi" was used instead of 
 
 To address this, I performed the following correction:
 
-- Used the gsub() function to replace occurrences of "SafFRi" with "Safari"
+- Used the `gsub()` function to replace occurrences of "SafFRi" with "Safari"
 
 ``` r
 # Correcting the typo in accessed_from column
@@ -243,7 +243,7 @@ The language column shows inconsistency in case (uppercase/lowercase). To ensure
 
 To address this, I performed the following corrections:
 
--  Applied the tools::toTitleCase() function to convert all values in the language column to title case:
+-  Applied the `tools::toTitleCase()` function to convert all values in the language column to title case:
 
 ``` r
 # Convert values in the language column to title case
