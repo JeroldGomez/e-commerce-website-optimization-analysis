@@ -193,7 +193,7 @@ for (col in colnames(e_commerce_wl)) {
 }
 ```
 
-After printing the output, we identified some data entry errors that required attention. Here are the issues identified in specific columns and the corrective actions taken:
+After printing the output, I identified some data entry errors that required attention. Here are the issues identified in specific columns and the corrective actions taken:
 
 **Network Protocol Column**
 
@@ -213,6 +213,41 @@ To address this, I performed the following corrections:
 # Remove leading/trailing whitespaces and standardize values
 e_commerce_wl$network_protocol <- trimws(e_commerce_wl$network_protocol)
 e_commerce_wl$network_protocol <- gsub("TCP", "TCP/IP", e_commerce_wl$network_protocol)
+```
+
+**Accessed From Column**
+
+The *accessed_from* column contained a typo, where "SafFRi" was used instead of "Safari." The correction involved replacing "SafFRi" with "Safari."
+
+To address this, I performed the following correction:
+
+- Used the gsub() function to replace occurrences of "SafFRi" with "Safari"
+
+``` r
+# Correcting the typo in accessed_from column
+e_commerce_wl$accessed_from <- gsub("SafFRi", "Safari", e_commerce_wl$accessed_from)
+```
+
+**Language Column**
+
+The language column shows inconsistency in case (uppercase/lowercase). To ensure consistency, I converted all values to lowercase using the tolower() function.
+
+``` r
+[1] "Column: language"
+ [1] "English"    "Spanish"    "Chinese"    "Italian"    "persian"    "German"     "Russian"   
+ [8] "italian"    "French"     "malayalam"  "romanian"   "polish"     "urdu"       "swedish"   
+[15] "Arabic"     "Portuguese" "Thai"       "Japanese"   "nepali"     "Dutch"      "mongolian" 
+[22] "swahili"    "tegulu"     "Slovak"     "norwegian"  "marathi"    "malay"      "macedonian"
+[29] "serbian"    "slovene" 
+```
+
+To address this, I performed the following corrections:
+
+-  Applied the tolower() function to convert all values in the language column to lowercase
+
+``` r
+# Convert values in the language column to lowercase
+e_commerce_wl$language <- tolower(e_commerce_wl$language)
 ```
 
 
