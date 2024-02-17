@@ -305,7 +305,7 @@ Now that we have a clean dataset in hand, it's time to dive into the numbers and
 - **Demographic Insights:** Understanding user demographics, including age, gender, and country.
 - **Membership Influence:** Investigating how membership status correlates with conversion rates.
 
-For the initial part of our analysis, we'll be utilizing RStudio. It's a robust tool for statistical analysis and visualization. We'll analyze the numbers, create meaningful visualizations, and draw preliminary insights. Later on, we'll transition to Tableau to craft more sophisticated and visually appealing representations that will assist us in the "Share" phase. 
+For the initial part of our analysis, we'll be utilizing RStudio for statistical analysis and visualization. We'll analyze the numbers, create meaningful visualizations, and draw preliminary insights. Later on, we'll transition to Tableau to craft more sophisticated and visually appealing representations that will assist us in the "Share" phase. 
 
 
 
