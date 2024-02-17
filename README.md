@@ -65,13 +65,13 @@ Acquired skills to explore and understand datasets and applied techniques for da
 
 Utilized the "E-commerce Website Log" dataset, sourced from [Kaggle](https://www.kaggle.com/datasets/kzmontage/e-commerce-website-logs), which is licensed under the Open Database License (ODbL). The dataset contains information about user interactions on the e-commerce website, including session duration, traffic sources, user demographics, and membership status.
 
-I organized the dataset by placing it into a folder named "GivenameFolder." Additionally, to ensure consistency and avoid potential errors or confusion, I renamed the file within the folder, replacing spaces with underscores. The cleaned and organized dataset is available in the repository as [GivenameFolder/e_commerce_website_log_cleaned.csv](link-to-cleaned-dataset).
+I organized the dataset by placing it into a folder named "GivenameFolder." Additionally, to ensure consistency and avoid potential errors or confusion, I renamed the file within the folder. The cleaned and organized dataset is available in the repository as [GivenameFolder/e_commerce_website_log_cleaned.csv](link-to-cleaned-dataset).
 
 Special thanks to [KZ Data Lover](https://www.kaggle.com/kzmontage/datasets), the creator of the "E-commerce Website Log" dataset on Kaggle. Their contribution provides valuable insights for data analysis, and I'm grateful for the opportunity to explore and learn from this dataset.
 
 ### Process
 
-Developed proficiency in manipulating and transforming data.
+Leveraged data manipulation skills to process and transform the dataset effectively.
 
 **Data Cleaning Process**
 
@@ -128,7 +128,7 @@ e_commerce_wl$accessed_date <- as.POSIXct(e_commerce_wl$accessed_date, format = 
 unique_age_values <- unique(e_commerce_wl$age)
 print(unique_age_values) # Printed data has non-numeric values, such as "--"
 
-# Handling non-numeric values, we want to convert non-numeric values to NA
+# Handling non-numeric values and outliers
 e_commerce_wl$age <- ifelse(grepl("[^0-9]", e_commerce_wl$age), NA, e_commerce_wl$age)
 
 # Converting age to numeric
@@ -183,11 +183,24 @@ e_commerce_wl <- e_commerce_wl %>%
   )
 ```
 
+4. **Fixing Mistakes:** We'll also look out for any errors in the data. There might be typos or things that just don't make sense. We'll straighten those out.
+``` r
+# Check for data entry errors in all columns
+for (col in colnames(e_commerce_wl)) {
+  unique_values <- unique(e_commerce_wl[[col]])
+  print(paste("Column:", col))
+  print(unique_values)
+}
+```
 
-4. **Checking for Missing Info:**
-   - Let's see if there's any information missing. If something's missing, we'll decide what to do – either guess the missing bits or maybe leave out the whole row if we can't figure it out.
+After printing the output, we identified some data entry errors that required attention. Here are the issues identified in specific columns and the corrective actions taken:
 
-5. **Fixing Mistakes:**
-   - We'll also look out for any errors in the data. For example, in the *network_protocol* and *age* columns, there might be typos or things that just don't make sense. We'll straighten those out.
+#### Network Protocol Column
 
+The *network_protocol* column had leading and trailing whitespaces in some values. Additionally, the values were not standardized. To address this, I performed the following corrections:
+
+- Removed leading/trailing whitespaces using the `trimws()` function.
+- Standardized values by replacing "TCP" with "TCP/IP."
+
+The updated unique values in the *network_protocol* column are as follows:
 
