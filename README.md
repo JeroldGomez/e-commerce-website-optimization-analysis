@@ -341,8 +341,25 @@ cat("Conversion Rate:", conversion_rate, "%\n")
 # cat("Conversion Rate:", conversion_rate, "%\n"): Prints the conversion rate along with a descriptive message.
 
 ```
-After analyzing the data, we found that the conversion rate for the e-commerce website is **77.01%**. This percentage represents the proportion of unique visitors who made a purchase out of the total unique visitors to the website. The conversion rate is a key metric indicating the effectiveness of the website in converting visits into successful transactions.
+After analyzing the data, we found that the conversion rate for the e-commerce website is **77.01%**. That's a high conversion rate, it shows that the website is successful in convincing a large percentage of visitors to make a purchase.
 
+While a high conversion rate is positive, it's also essential to continuously analyze and optimize the website's performance. Identifying factors contributing to the conversion rate can help enhance the user experience, refine marketing strategies, and further boost conversion rates.
 
+**Average Session Duration Calculation**
+
+To gain insights into user engagement, we calculated the average session duration on the e-commerce website.
+
+```r
+average_session_duration <- mean(e_commerce_wl$duration_secs, na.rm = TRUE)
+
+# Explanation:
+# mean() function that calculates the average of a numerical vector.
+# na.rm = TRUE is an argument used to exclude any missing values from the calculation
+
+# Convert average session duration from seconds to minutes
+average_session_duration_minutes <- average_session_duration / 60
+```
+After calculating the average session duration, which resulted in approximately **3248.032** seconds which is a total of 54.13 minutes.
+In our case, the average session duration of around 54 minutes suggests a relatively healthy engagement level, but further analysis and correlation with other metrics will provide a more comprehensive understanding of user interactions and guide optimization strategies for improved website performance.
 
 
