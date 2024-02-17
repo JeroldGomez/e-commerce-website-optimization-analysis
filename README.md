@@ -71,7 +71,7 @@ Special thanks to [KZ Data Lover](https://www.kaggle.com/kzmontage/datasets), th
 
 ### Process
 
-Leveraged data manipulation skills to process and transform the dataset effectively.
+I used RStudio, a handy program for working with data, along with tidyverse and janitor, simple packages that make it easy to understand and clean up data. 
 
 **Data Cleaning Process**
 
