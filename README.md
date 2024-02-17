@@ -363,7 +363,38 @@ average_session_duration_minutes <- average_session_duration / 60
 After calculating the average session duration, which resulted in approximately **3248.032** seconds which is a total of 54.13 minutes.
 In our case, the average session duration of around 54 minutes suggests a relatively healthy engagement level, but further analysis and correlation with other metrics will provide a more comprehensive understanding of user interactions and guide optimization strategies for improved website performance.
 
-**Traffic Source Effectiveness**
+
+## Analyzing Traffic Source Distribution
+
+To understand the effectiveness of different traffic sources, I aggregated the data to count the number of visits for each accessed platform. The resulting summary provides insights into the distribution of visits across various traffic sources.
+``` r
+# Aggregating traffic source data: Counting visits for each accessed platform
+traffic_source_summary <- e_commerce_wl %>%
+  group_by(accessed_from) %>%
+  summarise(Visits = n())
+```
+### Traffic Source Summary
+
+The table below displays the count of visits for each accessed platform:
+
+| Rank | Traffic Source    | Visits |
+|------|-------------------|--------|
+| 1    | Android App       | 38,216 |
+| 2    | Chrome            | 28,254 |
+| 3    | IOS App           | 21,606 |
+| 4    | Microsoft Edge    | 14,958 |
+| 5    | Mozilla Firefox   | 26,592 |
+| 6    | Others            | 26,592 |
+| 7    | Safari            | 16,620 |
+
+### Insights
+
+1. **Android App** and **Chrome** are the top two traffic sources with the highest number of visits.
+2. **Microsoft Edge** and **Safari** have comparatively lower visit counts, indicating potential areas for improvement or optimization.
+3. **Mozilla Firefox** and **Others** also contribute significantly to the overall traffic.
+
+To enhance understanding, I created a bar plot visualizing the distribution of visits across different traffic sources. The plot provides a visual representation of the data, making it easier to identify patterns and trends.
+
 
 
 
