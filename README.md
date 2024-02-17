@@ -65,7 +65,13 @@ Acquired skills to explore and understand datasets and applied techniques for da
 
 Utilized the "E-commerce Website Log" dataset, sourced from [Kaggle](https://www.kaggle.com/datasets/kzmontage/e-commerce-website-logs), which is licensed under the Open Database License (ODbL). The dataset contains information about user interactions on the e-commerce website, including session duration, traffic sources, user demographics, and membership status.
 
+I organized the dataset by placing it into a folder named "GivenameFolder." Additionally, to ensure consistency and avoid potential errors or confusion, I renamed the file within the folder, replacing spaces with underscores. The cleaned and organized dataset is available in the repository as [GivenameFolder/e_commerce_website_log_cleaned.csv](link-to-cleaned-dataset).
+
 Special thanks to [KZ Data Lover](https://www.kaggle.com/kzmontage/datasets), the creator of the "E-commerce Website Log" dataset on Kaggle. Their contribution provides valuable insights for data analysis, and I'm grateful for the opportunity to explore and learn from this dataset.
+
+### Process
+
+Developed proficiency in manipulating and transforming data.
 
 **Data Cleaning Process**
 
