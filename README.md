@@ -307,6 +307,24 @@ Now that we have a clean dataset in hand, it's time to dive into the numbers and
 
 For the initial part of our analysis, we'll be utilizing RStudio for statistical analysis and visualization. We'll analyze the numbers, create meaningful visualizations, and draw preliminary insights. Later on, we'll transition to Tableau to craft more sophisticated and visually appealing representations that will assist us in the "Share" phase. 
 
+**Conversion Rate Analysis**
+
+To gauge the effectiveness of the e-commerce website in turning visitors into customers, we calculate the conversion rate. Here's a breakdown of the process:
+
+1. **Total Visitors Count:**
+   - We start by obtaining the total number of visitors to the website, which stands at 172,838.
+``` r
+total_visitors <- nrow(e_commerce_wl) # Get the total number of visitors
+print(total_visitors) # total visitors of 172,838
+```
+
+2. **Counting Successful Conversions:**
+   - Next, we identify successful conversions by counting instances where sales were greater than zero per row(visitor). This provides us with the number of visitors who made a purchase.
+
+3. **Calculating Conversion Rate:**
+   - Finally, the conversion rate is determined by dividing the number of conversions by the total number of visitors and multiplying by 100 for a percentage. The resulting conversion rate is rounded to two decimal places.
+
+In our analysis, the calculated conversion rate provides valuable insights into the website's ability to convert visitors into customers. This metric serves as a key indicator of the overall success of the e-commerce platform in driving sales.
 
 
 
