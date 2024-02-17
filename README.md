@@ -197,7 +197,7 @@ After printing the output, I identified some data entry errors that required att
 
 **Network Protocol Column**
 
-The *network_protocol* column had trailing whitespaces in some values. Additionally, the values were not standardized. 
+The *network_protocol* column had trailing whitespaces in all of the values. Additionally, the values were not standardized. 
 
 ``` r
 [1] "Column: network_protocol"
