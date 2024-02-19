@@ -213,7 +213,7 @@ The *network_protocol* column had trailing whitespaces in all of the values. Add
 To address this, I performed the following corrections:
 
 - Removed trailing whitespaces using the `trimws()` function.
-- Standardized values by replacing "TCP" with "TCP/IP."
+- Standardized values by replacing "TCP" with "TCP/IP." using `gsub()`
 
 ``` r
 # Remove leading/trailing whitespaces and standardize values
@@ -373,8 +373,6 @@ traffic_source_summary <- e_commerce_wl %>%
   group_by(accessed_from) %>%
   summarise(Visits = n())
 ```
-**Traffic Source Summary**
-
 The table below displays the count of visits for each accessed platform:
 
 | Rank | Traffic Source    | Visits |
@@ -417,6 +415,62 @@ ggsave("traffic_source_distribution.png")
 3. **Mozilla Firefox** and **Others** also contribute significantly to the overall traffic.
 
 **Analyzing User Demographics**
+
+Understanding the demographics of users is crucial for tailoring the user experience and optimizing conversion rates. In this section, I explore demographic insights based on user age, gender, and country.
+
+1. **User Age Distribution**
+
+To gain insights into the age distribution of users, I utilized the available data on user ages. 
+```r
+
+```
+
+The following visual representation provides a glimpse into the distribution:
+
+![User Age Distribution](user_age_distribution.png)
+
+Insight from visualizations here!
+
+2. **Gender Distribution**
+
+Understanding the gender distribution among users is valuable for targeted marketing and user experience optimization. 
+``` r
+# Analyzing Gender Distribution
+gender_summary <- e_commerce_wl %>%
+  group_by(gender) %>%
+  summarise(Users = n())
+```
+| Female | Male  | Unknown |
+|--------|-------|---------|
+| 93903  | 63049 | 15886   |
+
+
+The bar plot below illustrates the gender distribution:
+![gender_distribution](https://github.com/JeroldGomez/E-Commerce-Website-Optimization-Analysis/assets/106787297/5d8ee3db-169d-4ec5-b2f9-9f05b29ca52a)
+
+Insights from the gender distribution plot:
+
+
+This visualization assists in identifying whether there are gender-specific trends or preferences among users.
+
+### User Country Distribution
+
+Analyzing the geographic distribution of users provides insights into potential regional variations in user behavior. The pie chart below visualizes the distribution of users across different countries:
+
+![User Country Distribution](user_country_distribution.png)
+
+Key points from the user country distribution:
+- Each slice of the pie represents a different country.
+- The size of the slice corresponds to the percentage of users from that country.
+
+This visualization helps in identifying major user demographics by country, enabling targeted strategies based on regional preferences or characteristics.
+
+## Tools Used
+
+To create these visualizations, I utilized the `ggplot` library in R, which allows for flexible and customized data visualizations.
+
+
+
 
 
 
