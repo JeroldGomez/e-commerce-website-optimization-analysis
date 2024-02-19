@@ -437,8 +437,8 @@ Understanding the gender distribution among users is valuable for targeted marke
 ``` r
 # Analyzing Gender Distribution
 gender_summary <- e_commerce_wl %>%
-  group_by(gender) %>%
-  summarise(Users = n())
+  group_by(gender) %>% # groups by the 'gender' column, enabling us to perform operations on each unique gender category.
+  summarise(Users = n()) # counts the number of users (count of rows) for each gender category, and the result is stored in the 'Users' column.
 ```
 The table below displays the count for each gender:
 
@@ -454,21 +454,64 @@ This indicates that the majority of users have identified as "Female," with a co
 
 The presence of users with an "Unknown" gender category, numbering 15,886, may indicate that some users have not provided or disclosed their gender information. This could be due to various reasons such as privacy concerns or optional gender disclosure during account registration.
 
-### User Country Distribution
+**Country Distribution**
 
-Analyzing the geographic distribution of users provides insights into potential regional variations in user behavior. The pie chart below visualizes the distribution of users across different countries:
+Analyzing the geographic distribution of users provides insights into potential regional variations in user behavior. 
+```r
+# Grouping by country and summarizing the count of users
+country_summary <- e_commerce_wl %>%
+  group_by(country) %>%
+  summarise(Users = n()) %>%
+  arrange(desc(Users)) # arrange the result in descending order based on the User Column
+```
+This table provides a clear overview of the user distribution across various countries:
 
-![User Country Distribution](user_country_distribution.png)
+| Rank | Country               | Users |
+|------|-----------------------|-------|
+| 1    | Italy                 | 34438 |
+| 2    | United States         | 30408 |
+| 3    | Canada                | 17756 |
+| 4    | China                 | 10177 |
+| 5    | Japan                 | 9962  |
+| 6    | Russia                | 9532  |
+| 7    | Switzerland           | 8237  |
+| 8    | India                 | 8011  |
+| 9    | Poland                | 6710  |
+| 10   | United Kingdom        | 4984  |
+| 11   | Austria               | 4765  |
+| 12   | Australia             | 4553  |
+| 13   | Sweden                | 4491  |
+| 14   | Norway                | 3681  |
+| 15   | Argentina             | 3212  |
+| 16   | South Korea           | 2169  |
+| 17   | Germany               | 2167  |
+| 18   | Puerto Rico           | 1731  |
+| 19   | Colombia              | 1514  |
+| 20   | Peru                  | 1085  |
+| 21   | Mexico                | 1083  |
+| 22   | South Africa          | 765   |
+| 23   | Finland               | 651   |
+| 24   | Denmark               | 217   |
+| 25   | Ireland               | 217   |
+| 26   | United Arab Emirates  | 217   |
+| 27   | France                | 105   |
 
-Key points from the user country distribution:
-- Each slice of the pie represents a different country.
-- The size of the slice corresponds to the percentage of users from that country.
 
-This visualization helps in identifying major user demographics by country, enabling targeted strategies based on regional preferences or characteristics.
+The filled map below visualizes the distribution of users across different countries:
+The color scheme:
+- **Green:** Represents countries with the highest user counts.
+- **Red:** Represents countries with the lowest user counts.
 
-## Tools Used
+**Top 5 Highest User Counts**
+![highest_country_distribution](https://github.com/JeroldGomez/E-Commerce-Website-Optimization-Analysis/assets/106787297/911b06dc-e88e-4711-9bf9-773c1bd0a98a)
 
-To create these visualizations, I utilized the `ggplot` library in R, which allows for flexible and customized data visualizations.
+**Top 5 Lowest User Counts**
+![lowest_country_distribution](https://github.com/JeroldGomez/E-Commerce-Website-Optimization-Analysis/assets/106787297/8679a8f1-9af2-4400-ab90-aa9e13eda8b2)
+
+From the table  and visualizations showing the user distribution per country, we can derive several insights.
+
+Countries like Italy, the United States, Canada, China, and Japan have a significant number of users, indicating a strong user presence in these regions. The presence of users from a diverse set of countries suggests that the e-commerce website has a global or international user base. Understanding the distribution of users across different countries can help identify potential market opportunities. For instance, if a country has a lower user count, it might represent an area for potential business growth and targeted marketing efforts.
+
 
 
 
