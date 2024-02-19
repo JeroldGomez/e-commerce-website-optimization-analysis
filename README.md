@@ -448,7 +448,7 @@ The table below displays the count for each gender:
 
 The bar plot below illustrates the gender distribution, this visualization was created using Tableau to create more appealing visualizations.
 
-![gender_distribution](https://github.com/JeroldGomez/E-Commerce-Website-Optimization-Analysis/assets/106787297/a795e176-2a2c-47fd-a904-7b75a4f148e0)
+![gender_distribution](https://github.com/JeroldGomez/E-Commerce-Website-Optimization-Analysis/assets/106787297/2b65dc49-2691-4153-aab9-e34334071862)
 
 This indicates that the majority of users have identified as "Female," with a count of 93,903. This suggests that the e-commerce website has a larger female user base. While not as prominent as the female user base, there is still a substantial count of male users, totaling 63,049. This implies a diverse user demographic with a significant representation of both genders.
 
