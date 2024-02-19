@@ -440,19 +440,19 @@ gender_summary <- e_commerce_wl %>%
   group_by(gender) %>%
   summarise(Users = n())
 ```
+The table below displays the count for each gender:
+
 | Female | Male  | Unknown |
 |--------|-------|---------|
 | 93903  | 63049 | 15886   |
-
 
 The bar plot below illustrates the gender distribution:
 
 ![gender_distribution](https://github.com/JeroldGomez/E-Commerce-Website-Optimization-Analysis/assets/106787297/a795e176-2a2c-47fd-a904-7b75a4f148e0)
 
-Insights from the gender distribution plot:
+This indicates that the majority of users have identified as "Female," with a count of 93,903. This suggests that the e-commerce website has a larger female user base. While not as prominent as the female user base, there is still a substantial count of male users, totaling 63,049. This implies a diverse user demographic with a significant representation of both genders.
 
-
-This visualization assists in identifying whether there are gender-specific trends or preferences among users.
+The presence of users with an "Unknown" gender category, numbering 15,886, may indicate that some users have not provided or disclosed their gender information. This could be due to various reasons such as privacy concerns or optional gender disclosure during account registration.
 
 ### User Country Distribution
 
