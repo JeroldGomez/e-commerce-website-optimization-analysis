@@ -446,7 +446,8 @@ gender_summary <- e_commerce_wl %>%
 
 
 The bar plot below illustrates the gender distribution:
-![gender_distribution](https://github.com/JeroldGomez/E-Commerce-Website-Optimization-Analysis/assets/106787297/c56225b9-e6d4-4d40-b95d-25d5a851c900)
+
+![gender_distribution](https://github.com/JeroldGomez/E-Commerce-Website-Optimization-Analysis/assets/106787297/a795e176-2a2c-47fd-a904-7b75a4f148e0)
 
 Insights from the gender distribution plot:
 
