@@ -446,7 +446,7 @@ The table below displays the count for each gender:
 |--------|-------|---------|
 | 93903  | 63049 | 15886   |
 
-The bar plot below illustrates the gender distribution:
+The bar plot below illustrates the gender distribution, this visualization was created using Tableau to create more appealing visualizations.
 
 ![gender_distribution](https://github.com/JeroldGomez/E-Commerce-Website-Optimization-Analysis/assets/106787297/a795e176-2a2c-47fd-a904-7b75a4f148e0)
 
