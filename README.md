@@ -498,7 +498,7 @@ This table provides a clear overview of the user distribution across various cou
 
 
 The filled map below visualizes the distribution of users across different countries:
-The color scheme:
+
 - **Green:** Represents countries with the highest user counts.
 - **Red:** Represents countries with the lowest user counts.
 
