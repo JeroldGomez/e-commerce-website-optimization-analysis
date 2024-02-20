@@ -608,6 +608,7 @@ From the table  and visualizations showing the user distribution per country, we
 Countries like Italy, the United States, Canada, China, and Japan have a significant number of users, indicating a strong user presence in these regions. The presence of users from a diverse set of countries suggests that the e-commerce website has a global or international user base. The distribution of users across different countries can help us identify potential market opportunities. For instance, countries with lower user counts, represent potential areas for growth.
 
 **Membership Influence:**
+
 Let's start by analyzing the conversion rate per membership status
 ```r
 # Calculate the conversion rate for each membership type
@@ -633,6 +634,41 @@ print(conversion_rate_by_membership)
 
 3. Premium Membership
    - Users with premium membership exhibit a high conversion rate of 83.7%. Similar to normal membership, this suggests that premium members are actively making purchases. This could be valuable for the business, indicating that premium features or benefits might be positively influencing conversion rates.
+
+Next we'll investigate how different membership types correlate with sales.
+```r
+# Summarize sales based on membership type
+sales_by_membership <- e_commerce_wl %>%
+  group_by(membership) %>%
+  summarise(Total_Sales = sum(sales))
+
+# Print the summary table
+print(sales_by_membership)
+```
+
+| Membership     | Conversion_Rate |
+|----------------|-----------------|
+| Normal         | 22694861        | 
+| Not Logged In  | 0               | 
+| Premium        | 48401436        | 
+
+1. Normal Membership
+   - Users with normal membership have contributed significantly to total sales. This aligns with the high conversion rate observed for normal members, indicating that users with this membership status are not only converting at a high rate but also making substantial purchases.
+
+2. Not Logged In
+   - The $0 total sales for users who are not logged in may indicate a tracking or data issue. It's important to address this anomaly and understand whether there are actual sales associated with users without a logged-in status. This discrepancy could impact the accuracy of revenue attribution.
+
+3. Premium Membership
+   - Premium members have contributed substantially to total sales, with $48,401,436. This emphasizes the value of users with premium membership status, as they are not only converting at a high rate but also making higher-value purchases. Understanding the preferences and behaviors of premium members can inform targeted strategies to enhance their overall experience.
+  
+There is a notable difference in the total sales between different membership types. Premium members stand out as major contributors to total sales, followed by normal members. The absence of sales for "Not Logged In" users might require further investigation since the $0.00 total sales for "Not Logged In" users could be an indication of a data issue or a genuine lack of sales for users without a logged-in status. Further investigation into the data collection process and user behavior is recommended.
+
+___
+
+### Act
+
+Based on the comprehensive analysis of the e-commerce dataset, several key insights and recommendations emerge:
+
 
 
 
