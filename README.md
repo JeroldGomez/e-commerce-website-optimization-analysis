@@ -619,11 +619,11 @@ conversion_rate_by_membership <- e_commerce_wl %>%
 print(conversion_rate_by_membership)
 ```
 
-| Membership | Conversion_Rate |
-|------|-----------------------|-------|
-| Normal   | 84.0                 | 
-| Not Logged In    | 0         | 
-| Premium    | 83.7              | 
+| Membership     | Conversion_Rate |
+|----------------|-----------------|
+| Normal         | 84.0            | 
+| Not Logged In  | 0               | 
+| Premium        | 83.7            | 
 
 1. Normal Membership
    - Users with normal membership have a high conversion rate of 84.0%. This suggests that the majority of users with normal membership status are making purchases. This could indicate the effectiveness of the e-commerce platform in catering to and converting regular members.
