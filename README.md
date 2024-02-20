@@ -459,7 +459,7 @@ age_summary <- e_commerce_wl %>%
   summarise(Users = n()) # counts the number of users (count of rows) for each age category, and the result is stored in the 'Users' column.
 
 ```
-**Age Distribution Summary**
+The table below displays the count for each age
 
 | Age | Users |
 |-----|-------|
