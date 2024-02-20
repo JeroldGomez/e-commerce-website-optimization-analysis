@@ -608,6 +608,32 @@ From the table  and visualizations showing the user distribution per country, we
 Countries like Italy, the United States, Canada, China, and Japan have a significant number of users, indicating a strong user presence in these regions. The presence of users from a diverse set of countries suggests that the e-commerce website has a global or international user base. The distribution of users across different countries can help us identify potential market opportunities. For instance, countries with lower user counts, represent potential areas for growth.
 
 **Membership Influence:**
+Let's start by analyzing the conversion rate per membership status
+```r
+# Calculate the conversion rate for each membership type
+conversion_rate_by_membership <- e_commerce_wl %>%
+  group_by(membership) %>%
+  summarise(Conversion_Rate = round(sum(sales > 0) / n() * 100, 2))
+
+# Print the summary table
+print(conversion_rate_by_membership)
+```
+
+| Membership | Conversion_Rate |
+|------|-----------------------|-------|
+| Normal   | 84.0                 | 
+| Not Logged In    | 0         | 
+| Premium    | 83.7              | 
+
+1. Normal Membership
+   - Users with normal membership have a high conversion rate of 84.0%. This suggests that the majority of users with normal membership status are making purchases. This could indicate the effectiveness of the e-commerce platform in catering to and converting regular members.
+
+2. Not Logged In
+   - Users who are not logged in have a conversion rate of 0%. This could be expected, as users who are not logged in might be browsing without the intention to make a purchase. Alternatively, it might also indicate a tracking or data issue for users without a logged-in status.
+
+3. Premium Membership
+   - Users with premium membership exhibit a high conversion rate of 83.7%. Similar to normal membership, this suggests that premium members are actively making purchases. This could be valuable for the business, indicating that premium features or benefits might be positively influencing conversion rates.
+
 
 
 
