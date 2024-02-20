@@ -522,7 +522,7 @@ Moving forward, we'll consider the limitations imposed by missing data and explo
 
 The bar plot below illustrates the age distribution, this visualization was created using Tableau to create more appealing visualizations.
 
-![age_distribution](https://github.com/JeroldGomez/E-Commerce-Website-Optimization-Analysis/assets/106787297/498a436d-fcff-41ad-b3c4-018647781e21)
+![age_distribution](https://github.com/JeroldGomez/E-Commerce-Website-Optimization-Analysis/assets/106787297/893d9bed-1fdd-437a-a4bc-d8cf6eca754a)
 
 It looks like it varies across different age categories, indicating the concentration of users in specific age ranges. For instance, age groups that have higher user counts could inform us targeted strategies for marketing, user experience improvements, or product offerings. On the other hand, The lower count for 18 years old may indicate that the e-commerce website may not be attracting a significant number of users from this age group. Marketing efforts may need adjustments to target a younger audience effectively.
 
