@@ -459,7 +459,7 @@ age_summary <- e_commerce_wl %>%
   summarise(Users = n()) # counts the number of users (count of rows) for each age category, and the result is stored in the 'Users' column.
 
 ```
-# Age Distribution Summary
+**Age Distribution Summary**
 
 | Age | Users |
 |-----|-------|
@@ -520,6 +520,8 @@ We've grouped the data by age, summarizing the count of users within each age ca
 
 Moving forward, we'll consider the limitations imposed by missing data and explore strategies such as subset analysis to draw meaningful demographic insights from the available information.
 
+The bar plot below illustrates the age distribution, this visualization was created using Tableau to create more appealing visualizations.
+
 ![age_distribution](https://github.com/JeroldGomez/E-Commerce-Website-Optimization-Analysis/assets/106787297/498a436d-fcff-41ad-b3c4-018647781e21)
 
 It looks like it varies across different age categories, indicating the concentration of users in specific age ranges. For instance, age groups that have higher user counts could inform us targeted strategies for marketing, user experience improvements, or product offerings. On the other hand, The lower count for 18 years old may indicate that the e-commerce website may not be attracting a significant number of users from this age group. Marketing efforts may need adjustments to target a younger audience effectively.
@@ -539,7 +541,7 @@ The table below displays the count for each gender:
 |--------|-------|---------|
 | 93903  | 63049 | 15886   |
 
-The bar plot below illustrates the gender distribution, this visualization was created using Tableau to create more appealing visualizations.
+The bar plot below illustrates the gender distribution, this visualization was also created using Tableau
 
 ![gender_distribution](https://github.com/JeroldGomez/E-Commerce-Website-Optimization-Analysis/assets/106787297/2b65dc49-2691-4153-aab9-e34334071862)
 
