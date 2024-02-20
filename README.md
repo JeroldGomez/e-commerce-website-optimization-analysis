@@ -422,14 +422,107 @@ Understanding the demographics of users is crucial for tailoring the user experi
 
 To gain insights into the age distribution of users, I utilized the available data on user ages. 
 ```r
+# to get the statistical information about the 'age' column
+summary(e_commerce_wl$age)
+```
+|    | Min. | 1st Qu. | Median | Mean  | 3rd Qu. | Max. | NA's  |
+|----|------|---------|--------|-------|---------|-----|-------|
+| Age| 18   | 30      | 43     | 43.44 | 56      | 69  | 88,124|
 
+This determines that the minimum age in the dataset is 18 and the first quartile is 30 which means that 25% of the observed ages are 30 or younger. The median is 43, the middle value of the age distribution, and the mean or average age is approximately 43.44. This is calculated by summing up all the ages and dividing by the total number of observations. The third quartile or the 75th percentile is 56. This means that 75% of the observed ages are 56 or younger and the maximum age in the dataset is 69.
+
+Lastly, There are 88,124 missing values (NA's) in the 'age' column which indicates that a substantial portion of the dataset lacks information regarding the age of users. There could be several reasons for this, such as incomplete data entry where there could be issues with the data entry process, resulting in missing or incomplete age information, or technical issues during data collection or storage may lead to missing values. All in all, This limitation may affect the comprehensiveness of our demographic insights, as age is a crucial factor in understanding user behavior.
+
+To mitigate the impact of missing values, considerations have been taken:
+- Subset Analysis: Given the substantial number of missing values, we may choose to focus on subsets of the data where relevant variables have complete information. This approach allows us to draw insights from portions of the dataset with more comprehensive data.
+
+we've undertaken the following steps:
+
+1. **Handling Missing Values**
+
+```r
+count_non_na_age <- sum(!is.na(e_commerce_wl$age))
+print(count_non_na_age) # 84,714 users with available age information.
 ```
 
-The following visual representation provides a glimpse into the distribution:
+We've identified a total of 84,714 users with available age information, allowing us to focus on a subset of the dataset where age details are present.
 
-![User Age Distribution](user_age_distribution.png)
+2. **Grouping by Age:**
+```r
+# Counting non NA values
+count_non_na_age <- sum(!is.na(e_commerce_wl$age))
+print(count_non_na_age) # total of 84,714 out of 172,838 number of users.
 
-Insight from visualizations here!
+# Grouping by age and summarizing the count of users
+age_summary <- e_commerce_wl %>%
+  group_by(age) %>% # groups by the 'age' column, enabling us to perform operations on each unique gender category.
+  summarise(Users = n()) # counts the number of users (count of rows) for each age category, and the result is stored in the 'Users' column.
+
+```
+# Age Distribution Summary
+
+| Age | Users |
+|-----|-------|
+| 18  | 1545  |
+| 19  | 1653  |
+| 20  | 1568  |
+| 21  | 1632  |
+| 22  | 1747  |
+| 23  | 1593  |
+| 24  | 1700  |
+| 25  | 1609  |
+| 26  | 1629  |
+| 27  | 1661  |
+| 28  | 1651  |
+| 29  | 1607  |
+| 30  | 1698  |
+| 31  | 1601  |
+| 32  | 1605  |
+| 33  | 1621  |
+| 34  | 1603  |
+| 35  | 1553  |
+| 36  | 1626  |
+| 37  | 1771  |
+| 38  | 1654  |
+| 39  | 1664  |
+| 40  | 1691  |
+| 41  | 1644  |
+| 42  | 1645  |
+| 43  | 1712  |
+| 44  | 1593  |
+| 45  | 1562  |
+| 46  | 1624  |
+| 47  | 1596  |
+| 48  | 1682  |
+| 49  | 1600  |
+| 50  | 1606  |
+| 51  | 1708  |
+| 52  | 1660  |
+| 53  | 1616  |
+| 54  | 1567  |
+| 55  | 1550  |
+| 56  | 1641  |
+| 57  | 1629  |
+| 58  | 1611  |
+| 59  | 1599  |
+| 60  | 1577  |
+| 61  | 1674  |
+| 62  | 1628  |
+| 63  | 1582  |
+| 64  | 1707  |
+| 65  | 1552  |
+| 66  | 1599  |
+| 67  | 1632  |
+| 68  | 1624  |
+| 69  | 1612  |
+
+We've grouped the data by age, summarizing the count of users within each age category. This approach allows us to derive insights from portions of the dataset with complete age information.
+
+Moving forward, we'll consider the limitations imposed by missing data and explore strategies such as subset analysis to draw meaningful demographic insights from the available information.
+
+![age_distribution](https://github.com/JeroldGomez/E-Commerce-Website-Optimization-Analysis/assets/106787297/498a436d-fcff-41ad-b3c4-018647781e21)
+
+It looks like it varies across different age categories, indicating the concentration of users in specific age ranges. For instance, age groups that have higher user counts could inform us targeted strategies for marketing, user experience improvements, or product offerings. On the other hand, The lower count for 18 years old may indicate that the e-commerce website may not be attracting a significant number of users from this age group. Marketing efforts may need adjustments to target a younger audience effectively.
 
 2. **Gender Distribution**
 
@@ -454,7 +547,7 @@ This indicates that the majority of users have identified as "Female," with a co
 
 The presence of users with an "Unknown" gender category, numbering 15,886, may indicate that some users have not provided or disclosed their gender information. This could be due to various reasons such as privacy concerns or optional gender disclosure during account registration.
 
-**Country Distribution**
+3. **Country Distribution**
 
 Analyzing the geographic distribution of users provides insights into potential regional variations in user behavior. 
 ```r
@@ -510,9 +603,9 @@ The filled map below visualizes the distribution of users across different count
 
 From the table  and visualizations showing the user distribution per country, we can derive several insights.
 
-Countries like Italy, the United States, Canada, China, and Japan have a significant number of users, indicating a strong user presence in these regions. The presence of users from a diverse set of countries suggests that the e-commerce website has a global or international user base. Understanding the distribution of users across different countries can help identify potential market opportunities. For instance, if a country has a lower user count, it might represent an area for potential business growth and targeted marketing efforts.
+Countries like Italy, the United States, Canada, China, and Japan have a significant number of users, indicating a strong user presence in these regions. The presence of users from a diverse set of countries suggests that the e-commerce website has a global or international user base. The distribution of users across different countries can help us identify potential market opportunities. For instance, countries with lower user counts, represent potential areas for growth.
 
-
+**Membership Influence:**
 
 
 
