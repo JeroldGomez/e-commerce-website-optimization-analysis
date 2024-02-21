@@ -712,7 +712,7 @@ Explore opportunities for expansion in countries with lower user counts, conside
 - Launching localized marketing campaigns and promotions to attract users from specific regions.
 
 #### b. Geographically-Tailored Website Features:
-Optimize website features based on geographic insights to accommodate diverse user preferences. Consider:
+Optimize website features based on geographic insights to accommodate diverse user preferences.
 
 - Customizing language options and currency settings to align with the preferences of users from different countries.
 - Showcasing region-specific products or promotions to enhance relevance for users in specific geographic locations.
@@ -726,7 +726,7 @@ Address the issue of missing values in the age column through improved data coll
 - Regularly audit the dataset to identify and rectify missing or inaccurate age data.
 
 #### b. Investigating Data Anomalies:
-Investigate and rectify anomalies such as $0 total sales for users not logged in. Strategies may include:
+Investigate and rectify anomalies such as $0 total sales for users not logged in.
 
 - Conducting a thorough review of the data collection process to identify any technical issues affecting the recording of sales for non-logged-in users.
 - Implementing tracking mechanisms to ensure accurate recording of user interactions, even for those without an account.
