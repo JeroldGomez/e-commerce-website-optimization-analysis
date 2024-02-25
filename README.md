@@ -65,7 +65,7 @@ Acquired skills to explore and understand datasets and applied techniques for da
 
 Utilized the "E-commerce Website Log" dataset, sourced from [Kaggle](https://www.kaggle.com/datasets/kzmontage/e-commerce-website-logs), which is licensed under the Open Database License (ODbL). The dataset contains information about user interactions on the e-commerce website, including session duration, traffic sources, user demographics, and membership status.
 
-I organized the dataset by placing it into a folder named "GivenameFolder." Additionally, to ensure consistency and avoid potential errors or confusion, I renamed the file within the folder. The cleaned and organized dataset is available in the repository as [Ecommerce_CaseStudy/e_commerce_website_log_cleaned.csv](https://github.com/JeroldGomez/E-Commerce-Website-Optimization-Analysis/tree/main/Ecommerce_CaseStudy).
+I organized the dataset by placing it into a folder named "Ecommerce_CaseStudy" Additionally, to ensure consistency and avoid potential errors or confusion, I renamed the file within the folder. The cleaned and organized dataset is available in the repository as [Ecommerce_CaseStudy/e_commerce_website_log_cleaned.csv](https://github.com/JeroldGomez/E-Commerce-Website-Optimization-Analysis/tree/main/Ecommerce_CaseStudy).
 
 Special thanks to [KZ Data Lover](https://www.kaggle.com/kzmontage/datasets), the creator of the "E-commerce Website Log" dataset on Kaggle. Their contribution provides valuable insights for data analysis, and I'm grateful for the opportunity to explore and learn from this dataset.
 
